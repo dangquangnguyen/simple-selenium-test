@@ -2,7 +2,7 @@ package vn.com.fsoft.cli.sample;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,9 +12,9 @@ public class SimpleTest {
 
 	@Test
 	public void testEasy() {
-		driver.get("http://www.guru99.com/selenium-tutorial.html");
+		driver.get("https://www.fpt-software.com/");
 		String title = driver.getTitle();
-		AssertJUnit.assertTrue(title.contains("Free Selenium Tutorials"));
+		Assert.assertTrue(title.contains("FPT Software"));
 	}
 
 	@BeforeTest
