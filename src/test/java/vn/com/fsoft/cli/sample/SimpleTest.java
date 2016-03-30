@@ -23,7 +23,7 @@ public class SimpleTest {
 
 	@BeforeTest
 	public void beforeTest() throws MalformedURLException {
-		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+		driver = new RemoteWebDriver(new URL("http://jenkins.devops-pilot.citus.io:4444/wd/hub"), DesiredCapabilities.firefox());
 	}
 
 	@AfterTest
