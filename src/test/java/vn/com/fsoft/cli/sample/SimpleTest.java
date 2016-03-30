@@ -1,7 +1,11 @@
 package vn.com.fsoft.cli.sample;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -18,8 +22,8 @@ public class SimpleTest {
 	}
 
 	@BeforeTest
-	public void beforeTest() {
-		driver = new SafariDriver();
+	public void beforeTest() throws MalformedURLException {
+		driver = new RemoteWebDriver(new URL("http://jenkins.devops-pilot.citus.io:4444/wd/hub"), DesiredCapabilities.firefox());
 	}
 
 	@AfterTest
