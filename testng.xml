@@ -4,6 +4,7 @@
   <test name="Test">
     <classes>
       <class name="vn.com.fsoft.cli.sample.SimpleTest"/>
+      <class name="vn.com.fsoft.cli.sample.SimpleChromeTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
